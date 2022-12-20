@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Rocket_Elevators_Customer_Portal.props" />
-</Project>
