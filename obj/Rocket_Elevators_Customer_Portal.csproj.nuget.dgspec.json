@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\julie\\Desktop\\rockect\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj": {}
+    "C:\\Users\\julie\\Desktop\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\julie\\Desktop\\rockect\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj": {
+    "C:\\Users\\julie\\Desktop\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\julie\\Desktop\\rockect\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj",
+        "projectUniqueName": "C:\\Users\\julie\\Desktop\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj",
         "projectName": "Rocket_Elevators_Customer_Portal",
-        "projectPath": "C:\\Users\\julie\\Desktop\\rockect\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj",
+        "projectPath": "C:\\Users\\julie\\Desktop\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal.csproj",
         "packagesPath": "C:\\Users\\julie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\julie\\Desktop\\rockect\\Rocket_Elevators_Customer_Portal\\Rocket_Elevators_Customer_Portal\\obj\\",
+        "outputPath": "C:\\Users\\julie\\Desktop\\Rocket_Elevators_Customer_Portal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\julie\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -63,10 +63,6 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[6.0.2, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql.Design": {
-              "target": "Package",
-              "version": "[1.1.2, )"
             }
           },
           "imports": [

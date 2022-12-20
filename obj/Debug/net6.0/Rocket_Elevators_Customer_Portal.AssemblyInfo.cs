@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Rocket_Elevators_Customer_Portal-dbc582a3-d937-40cf-97ab-28e50c94ab60")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-Rocket_Elevators_Customer_Portal-a2008bd3-374e-47ee-8aa7-1ed7ec03f530")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Rocket_Elevators_Customer_Portal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

@@ -11,7 +11,7 @@ using Rocket_Elevators_Customer_Portal.Data;
 namespace Rocket_Elevators_Customer_Portal.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221220174512_InitialCreate")]
+    [Migration("20221220195801_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
