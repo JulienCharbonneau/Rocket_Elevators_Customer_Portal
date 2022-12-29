@@ -2,13 +2,16 @@
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Rocket_Elevators_Customer_Portal.Models;
-using System.IO;
-
+using System;
+using System.Text.Json;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Rocket_Elevators_Customer_Portal.Controllers
 {
     public class HomeController : Controller
     {
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -34,9 +37,9 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
             return result_api;
         }
 
-        public string getBuildingByCustomerId (long id)
+        public Building getBuildingByCustomerId (long id)
         {
-            string api_url = String.Format("https://localhost:7047/api/Building/GetBuildingByCustomerId?id=1");
+            string api_url = String.Format("https://localhost:7047/api/Building/GetBuildingByCustomerId?id=" + id);
             WebRequest requestObject = WebRequest.Create(api_url);
             requestObject.Method = "GET";
             HttpWebResponse responseObject = null;
@@ -49,18 +52,37 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
                 result_api = sr.ReadToEnd();
                 sr.Close();
             }
-            return result_api;
+            
+                // Deserialize the JSON string into a Building object
+                Building building = JsonConvert.DeserializeObject<Building>(result_api);
+
+                // Output the ID of the building
+
+                return building;
+          
+
+
         }
+
+      
 
         public IActionResult Index()
         {
 
-           
+            var customer_building = getBuildingByCustomerId(1);
+
+            List<long> batteryIds = new List<long>();
+            foreach (var battery in customer_building.Batteries)
+            {
+                batteryIds.Add(battery.Id);
+            }
+
+            ViewBag.CustomerBatteries = batteryIds;
 
 
-            
             ViewBag.CustomerId = getCustomerId();
-            ViewBag.CustomerBuilding = getBuildingByCustomerId(1);
+            ViewBag.CustomerBuilding = customer_building.BuildingAddress;
+          //  ViewBag.CustomerBatteries = customer_batteries.TypeBuilding;
 
             return View();
         }

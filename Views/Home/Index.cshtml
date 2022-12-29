@@ -6,5 +6,8 @@
     <h1 class="display-4">Welcome</h1>
     <p>@ViewBag.CustomerId</p>
     <p>@ViewBag.CustomerBuilding</p>
+    <p>Baterries id:</p>
+    <p>@Html.Raw(string.Join(", ", ViewBag.CustomerBatteries))</p>
+
 
 </div>

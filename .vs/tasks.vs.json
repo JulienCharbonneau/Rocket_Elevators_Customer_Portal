@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Rocket_Elevators_Customer_Portal",
+      "appliesTo": "/",
+      "type": "launch"
+    }
+  ]
+}
