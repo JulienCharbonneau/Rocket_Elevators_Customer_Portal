@@ -6,9 +6,12 @@ using System;
 using System.Text.Json;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace Rocket_Elevators_Customer_Portal.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
 
@@ -64,8 +67,8 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
 
         }
 
-      
 
+        
         public IActionResult Index()
         {
 
