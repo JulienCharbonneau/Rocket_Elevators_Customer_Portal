@@ -4,10 +4,16 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>@ViewBag.CustomerId</p>
+    <p>Buildings address: </p>
     <p>@ViewBag.CustomerBuilding</p>
     <p>Baterries id:</p>
     <p>@Html.Raw(string.Join(", ", ViewBag.CustomerBatteries))</p>
+    <p>Column id:</p>
+    <p>@Html.Raw(string.Join(", ", ViewBag.CustomerColumns))</p>
+    <p>Elevator id:</p>
+    <p>@Html.Raw(string.Join(", ", ViewBag.CustomerElevators))</p>
+
+
 
 
 </div>

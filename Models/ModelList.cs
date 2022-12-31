@@ -47,7 +47,7 @@ public class Battery
 
 public class Building
     {
-        public long Id { get; set; }
+    public long Id { get; set; }
     public string BuildingAddress { get; set; }
     public string AdminFullName { get; set; }
     public string AdminEmail { get; set; }

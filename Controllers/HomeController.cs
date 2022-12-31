@@ -71,18 +71,39 @@ namespace Rocket_Elevators_Customer_Portal.Controllers
 
             var customer_building = getBuildingByCustomerId(1);
 
-            List<long> batteryIds = new List<long>();
+            List<long> batteryIds = new List<long>(); // loop to retrieve all batteries ids 
             foreach (var battery in customer_building.Batteries)
             {
                 batteryIds.Add(battery.Id);
             }
 
+            List<long> columnIds = new List<long>();// loop to retrieve all columns ids
+            foreach (var battery in customer_building.Batteries)
+            {
+                foreach (var column in battery.Columns)
+                {
+                    columnIds.Add(column.Id);
+                    Console.WriteLine("test column id: " + columnIds);
+                }
+            }
+
+            List<long> elevatorIds = new List<long>();
+            foreach (var battery in customer_building.Batteries)
+            {
+                foreach (var column in battery.Columns)
+                {
+                    foreach (var elevator in column.Elevators)
+                    {
+                        elevatorIds.Add(elevator.Id);
+                    }
+                }
+            }
+
+            ViewBag.CustomerElevators = elevatorIds;
+            ViewBag.CustomerColumns = columnIds;
             ViewBag.CustomerBatteries = batteryIds;
-
-
             ViewBag.CustomerId = getCustomerId();
             ViewBag.CustomerBuilding = customer_building.BuildingAddress;
-          //  ViewBag.CustomerBatteries = customer_batteries.TypeBuilding;
 
             return View();
         }
